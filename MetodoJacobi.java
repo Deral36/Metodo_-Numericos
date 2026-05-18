@@ -14,6 +14,7 @@ public class MetodoJacobi {
 
          System.out.println("\n");
          System.out.println("Cual es la Pregunta del Problema: ");
+         String pro=sc.nextLine();
         
         
         int orden = 4; 
@@ -39,16 +40,24 @@ public class MetodoJacobi {
             vant[i] = 100.0;
         }
 
-        System.out.print("Ingrese el error permitido (ej. 0.5): ");
+        System.out.print("Ingrese el error permitido: ");
         double errorDeseado = sc.nextDouble();
         System.out.print("Ingrese el número máximo de iteraciones: ");
         int tc = sc.nextInt();
 
         double errorTotal;
         int nc = 0;
-
+        System.out.println("                          Instituto Tecnológico de Culiacán");
+        System.out.println("                          Ing. En Sistemas computacionales");
+        System.out.println("Angel Eduardo Perez Rojas");
+        System.out.println("Solución de Sistema de Ecuaciones");
+        System.out.println("Metodo de Jacobi");
+        System.out.println("Horario: 10:00 a 11:00 Horas");
+        System.out.println();
+        System.out.println("PROBLEMA: "+ pro);
+        System.out.println();
         System.out.printf("\n%-5s | %-10s | %-10s | %-10s | %-10s | %-10s\n", 
-                          "Iter", "X1", "X2", "X3", "X4", "Error");
+                          "No.", "Carrito 1", "Carrito 2", "Carrito 3", "Carrito 4", "Error Total");
         System.out.println("---------------------------------------------------------------------------");
         do {
          errorTotal = 0;
@@ -67,7 +76,7 @@ public class MetodoJacobi {
                 errorTotal += Math.abs(vact[p] - vant[p]);
             }
         nc++;
-            System.out.printf("%-5d | %-10.4f | %-10.4f | %-10.4f | %-10.4f | %-10.4f\n", 
+            System.out.printf("%-5d | %-10.6f | %-10.6f | %-10.6f | %-10.6f | %-10.6f\n", 
                               nc, vact[0], vact[1], vact[2], vact[3], errorTotal);
 
            
