@@ -4,22 +4,7 @@ public class Simpson {
 
     static Scanner sc = new Scanner(System.in);
 
-    // Encabezado del informe
-    static void encabezado(String reglaTexto, String pregunta) {
-        System.out.println();
-        System.out.println("============================================================");
-        System.out.println("        Instituto Tecnologico de Culiacan");
-        System.out.println("        Ing. en Sistemas");
-        System.out.println("        Perez Soto Jose.");
-        System.out.println("        Integracion Numerica - Metodo de Simpson.");
-        System.out.println("        " + reglaTexto);
-        System.out.println("        De 12:00 a 13:00 horas.");
-        System.out.println("Pregunta: " + pregunta);
-        System.out.println("------------------------------------------------------------");
-        System.out.printf("%-6s %10s %12s %8s %15s%n", "Pxy", "x", "f(x)", "Factor", "f(x)*Factor");
-        System.out.println("------------------------------------------------------------");
-    }
-
+    
     public static void main(String[] args) {
 
         // ================================================
@@ -28,26 +13,14 @@ public class Simpson {
         System.out.println("============================================================");
         System.out.println("        Instituto Tecnologico de Culiacan");
         System.out.println("        Ing. en Sistemas Computacionales");
-        System.out.println("        Perez Soto Jose.");
-        System.out.println("        Metodo de Simpson.");
-        System.out.println("        De 12:00 a 13:00 horas.");
+        System.out.println("        Perez Rojas Angel Eduardo");
+        System.out.println("        Metodo de Simpson");
+        System.out.println("        De 10:00 a 11:00 horas.");
         System.out.println();
         System.out.println("  Este programa ejecuta el proceso de calculo sobre el tema");
         System.out.println("  de derivacion e integracion numerica utilizando las 4");
         System.out.println("  reglas de Simpson.");
-        System.out.println("============================================================");
-        System.out.println();
-        System.out.println("Metodo de las Reglas de Simpson");
-        System.out.println("  * Regla 1 : n=2");
-        System.out.println("  * Regla 2 : n=3");
-        System.out.println("  * Regla 3 : n>2 y n=par");
-        System.out.println("  * Regla 4 : n>3, n=impar y n=multiplo de 3");
-        System.out.println();
-
-        // ================================================
-        // CAPTURA DE DATOS GENERALES
-        // ================================================
-        System.out.print("Cual es la pregunta del Problema: ");
+         System.out.print("Cual es la pregunta del Problema: ");
         String pregunta = sc.nextLine();
 
         System.out.print("Valor Real de la Integral: ");
@@ -63,9 +36,29 @@ public class Simpson {
         System.out.print("Unidad: ");
         String unidad = sc.nextLine();
 
-        // ================================================
-        // REGLA 1 — Simpson 1/3 formula simple (n=2)
-        // ================================================
+
+        int N3 = 0;
+    do {
+    System.out.print("Capture el Numero de Divisiones para la regla 3: ");
+    N3 = sc.nextInt();
+    } while (!(N3 > 2 && N3 % 2 == 0));
+
+    int N4 = 0;
+    do {
+    System.out.print("Capture el Numero de Divisiones para la regla 4: ");
+    N4 = sc.nextInt();
+    } while (!(N4 > 3 && N4 % 2 != 0 && N4 % 3 == 0));
+
+        System.out.println("============================================================");
+        System.out.println();
+        System.out.println("Metodo de las Reglas de Simpson");
+        System.out.println("  * Regla 1 : n=2");
+        System.out.println("  * Regla 2 : n=3");
+        System.out.println("  * Regla 3 : n>2 y n=par");
+        System.out.println("  * Regla 4 : n>3, n=impar y n=multiplo de 3");
+        System.out.println();
+
+       
         int n1 = 2;
         double h, fa, fb, x1, x2, fx1, fx2, Vcalc, Error;
 
@@ -77,7 +70,18 @@ public class Simpson {
         Vcalc = ((1.0 * h) / 3) * (fa + (4 * fx1) + fb);
         Error = Math.abs(Vreal - Vcalc);
 
-        encabezado("Regla aplicada para Simpson de 1/3 para n=2.", pregunta);
+        System.out.println("============================================================");
+        System.out.println("        Instituto Tecnologico de Culiacan");
+        System.out.println("        Ing. en Sistemas Computacionales");
+        System.out.println("        Perez Rojas Angel Eduardo");
+        System.out.println("        Integracion Numerica - Metodo de Simpson.");
+        System.out.println("        Regla aplicada para Simpson de 1/3 para n=2.");
+        System.out.println("        De 10:00 a 11:00 horas.");
+        System.out.println("------------------------------------------------------------");
+        System.out.println("Pregunta: " + pregunta);
+        System.out.println("------------------------------------------------------------");
+        System.out.printf("%-6s %10s %12s %8s %15s%n", "Pxy", "x", "f(x)", "Factor", "f(x)*Factor");
+        System.out.println("------------------------------------------------------------");
         System.out.printf("%-6d %10.5f %12.5f %8d %15.5f%n", 1, a,  fa,  1, 1 * fa);
         System.out.printf("%-6d %10.5f %12.5f %8d %15.5f%n", 2, x1, fx1, 4, 4 * fx1);
         System.out.printf("%-6d %10.5f %12.5f %8d %15.5f%n", 3, b,  fb,  1, 1 * fb);
@@ -103,7 +107,18 @@ public class Simpson {
         Vcalc = ((3.0 * h) / 8) * (fa + (3 * fx1) + (3 * fx2) + fb);
         Error = Math.abs(Vreal - Vcalc);
 
-        encabezado("Regla aplicada para Simpson de 3/8 para n=3.", pregunta);
+        System.out.println("============================================================");
+        System.out.println("        Instituto Tecnologico de Culiacan");
+        System.out.println("        Ing. en Sistemas Computacionales");
+        System.out.println("        Perez Rojas Angel Eduardo");
+        System.out.println("        Integracion Numerica - Metodo de Simpson.");
+        System.out.println("        Regla aplicada para Simpson de 3/8 para n=3.");
+        System.out.println("        De 10:00 a 11:00 horas.");
+        System.out.println("------------------------------------------------------------");
+        System.out.println("Pregunta: " + pregunta);
+        System.out.println("------------------------------------------------------------");
+        System.out.printf("%-6s %10s %12s %8s %15s%n", "Pxy", "x", "f(x)", "Factor", "f(x)*Factor");
+        System.out.println("------------------------------------------------------------");
         System.out.printf("%-6d %10.5f %12.5f %8d %15.5f%n", 1, a,  fa,  1, 1 * fa);
         System.out.printf("%-6d %10.5f %12.5f %8d %15.5f%n", 2, x1, fx1, 3, 3 * fx1);
         System.out.printf("%-6d %10.5f %12.5f %8d %15.5f%n", 3, x2, fx2, 3, 3 * fx2);
@@ -118,18 +133,25 @@ public class Simpson {
         // ================================================
         // REGLA 3 — Simpson 1/3 formula compleja (N3)
         // ================================================
-        int N3 = 0;
-        do {
-            System.out.print("Capture el Numero de Divisiones para la regla 3: ");
-            N3 = sc.nextInt();
-        } while (!(N3 > 2 && N3 % 2 == 0));
+       
 
         Vcalc = 0;
         h = (b - a) / N3;
         double ca = a;
         double cb = b;
 
-        encabezado("Regla aplicada para Simpson de 1/3 formula compleja, n=" + N3 + ".", pregunta);
+        System.out.println("============================================================");
+        System.out.println("        Instituto Tecnologico de Culiacan");
+        System.out.println("        Ing. en Sistemas Computacionales");
+        System.out.println("        Perez Rojas Angel Eduardo");
+        System.out.println("        Integracion Numerica - Metodo de Simpson.");
+        System.out.println("        Regla aplicada para Simpson de 1/3 formula compleja, n=" + N3 + ".");
+        System.out.println("        De 10:00 a 11:00 horas.");
+        System.out.println("------------------------------------------------------------");
+        System.out.println("Pregunta: " + pregunta);
+        System.out.println("------------------------------------------------------------");
+        System.out.printf("%-6s %10s %12s %8s %15s%n", "Pxy", "x", "f(x)", "Factor", "f(x)*Factor");
+        System.out.println("------------------------------------------------------------");
 
         for (int x = 1; x <= N3 + 1; x++) {
             double factor, pto, fpto, valor;
@@ -185,18 +207,25 @@ public class Simpson {
         // ================================================
         // REGLA 4 — Simpson 3/8 formula compleja (N4)
         // ================================================
-        int N4 = 0;
-        do {
-            System.out.print("Capture el Numero de Divisiones para la regla 4: ");
-            N4 = sc.nextInt();
-        } while (!(N4 > 3 && N4 % 2 != 0 && N4 % 3 == 0));
+        
 
         Vcalc = 0;
         h  = (b - a) / N4;
         ca = a;
         cb = b;
 
-        encabezado("Regla aplicada para Simpson de 3/8 formula compleja, n=" + N4 + ".", pregunta);
+        System.out.println("============================================================");
+        System.out.println("        Instituto Tecnologico de Culiacan");
+        System.out.println("        Ing. en Sistemas Computacionales");
+        System.out.println("        Perez Rojas Angel Eduardo");
+        System.out.println("        Integracion Numerica - Metodo de Simpson.");
+        System.out.println("        Regla aplicada para Simpson de 3/8 formula compleja, n=" + N4 + ".");
+        System.out.println("        De 10:00 a 11:00 horas.");
+        System.out.println("------------------------------------------------------------");
+        System.out.println("Pregunta: " + pregunta);
+        System.out.println("------------------------------------------------------------");
+        System.out.printf("%-6s %10s %12s %8s %15s%n", "Pxy", "x", "f(x)", "Factor", "f(x)*Factor");
+        System.out.println("------------------------------------------------------------");
 
         for (int xx = 1; xx <= N4 + 1; xx++) {
             double factor, pto, fpto, valor;
