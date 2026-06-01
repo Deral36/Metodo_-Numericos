@@ -7,9 +7,6 @@ public class Simpson {
     
     public static void main(String[] args) {
 
-        // ================================================
-        // PANTALLA DE INICIO
-        // ================================================
         System.out.println("============================================================");
         System.out.println("        Instituto Tecnologico de Culiacan");
         System.out.println("        Ing. en Sistemas Computacionales");
@@ -18,8 +15,7 @@ public class Simpson {
         System.out.println("        De 10:00 a 11:00 horas.");
         System.out.println();
         System.out.println("  Este programa ejecuta el proceso de calculo sobre el tema");
-        System.out.println("  de derivacion e integracion numerica utilizando las 4");
-        System.out.println("  reglas de Simpson.");
+        System.out.println("  de derivacion e integracion numerica utilizando las 4 reglas de Simpson.");
          System.out.print("Cual es la pregunta del Problema: ");
         String pregunta = sc.nextLine();
 
@@ -74,7 +70,7 @@ public class Simpson {
         System.out.println("        Instituto Tecnologico de Culiacan");
         System.out.println("        Ing. en Sistemas Computacionales");
         System.out.println("        Perez Rojas Angel Eduardo");
-        System.out.println("        Integracion Numerica - Metodo de Simpson.");
+        System.out.println("        Metodo de Simpson.");
         System.out.println("        Regla aplicada para Simpson de 1/3 para n=2.");
         System.out.println("        De 10:00 a 11:00 horas.");
         System.out.println("------------------------------------------------------------");
@@ -92,9 +88,6 @@ public class Simpson {
         System.out.printf("Valor por el Metodo      = %.5f %s%n", Vcalc, unidad);
         System.out.printf("Error del Metodo         = %.5f %s%n", Error, unidad);
 
-        // ================================================
-        // REGLA 2 — Simpson 3/8 formula simple (n=3)
-        // ================================================
         int n2 = 3;
 
         h     = (b - a) / n2;
@@ -111,7 +104,7 @@ public class Simpson {
         System.out.println("        Instituto Tecnologico de Culiacan");
         System.out.println("        Ing. en Sistemas Computacionales");
         System.out.println("        Perez Rojas Angel Eduardo");
-        System.out.println("        Integracion Numerica - Metodo de Simpson.");
+        System.out.println("         Metodo de Simpson.");
         System.out.println("        Regla aplicada para Simpson de 3/8 para n=3.");
         System.out.println("        De 10:00 a 11:00 horas.");
         System.out.println("------------------------------------------------------------");
@@ -130,11 +123,6 @@ public class Simpson {
         System.out.printf("Valor por el Metodo      = %.5f %s%n", Vcalc, unidad);
         System.out.printf("Error del Metodo         = %.5f %s%n", Error, unidad);
 
-        // ================================================
-        // REGLA 3 — Simpson 1/3 formula compleja (N3)
-        // ================================================
-       
-
         Vcalc = 0;
         h = (b - a) / N3;
         double ca = a;
@@ -144,7 +132,7 @@ public class Simpson {
         System.out.println("        Instituto Tecnologico de Culiacan");
         System.out.println("        Ing. en Sistemas Computacionales");
         System.out.println("        Perez Rojas Angel Eduardo");
-        System.out.println("        Integracion Numerica - Metodo de Simpson.");
+        System.out.println("         Metodo de Simpson.");
         System.out.println("        Regla aplicada para Simpson de 1/3 formula compleja, n=" + N3 + ".");
         System.out.println("        De 10:00 a 11:00 horas.");
         System.out.println("------------------------------------------------------------");
@@ -202,12 +190,7 @@ public class Simpson {
         System.out.printf("No. de Divisiones= %d%n", N3);
         System.out.printf("Valor Real de la Integral= %.5f %s%n", Vreal, unidad);
         System.out.printf("Valor por el Metodo      = %.5f %s%n", Vcalc, unidad);
-        System.out.printf("Error del Metodo         = %.5f %s%n", Error, unidad);
-
-        // ================================================
-        // REGLA 4 — Simpson 3/8 formula compleja (N4)
-        // ================================================
-        
+        System.out.printf("Error del Metodo         = %.5f %s%n", Error, unidad);   
 
         Vcalc = 0;
         h  = (b - a) / N4;
@@ -218,7 +201,7 @@ public class Simpson {
         System.out.println("        Instituto Tecnologico de Culiacan");
         System.out.println("        Ing. en Sistemas Computacionales");
         System.out.println("        Perez Rojas Angel Eduardo");
-        System.out.println("        Integracion Numerica - Metodo de Simpson.");
+        System.out.println("         Metodo de Simpson.");
         System.out.println("        Regla aplicada para Simpson de 3/8 formula compleja, n=" + N4 + ".");
         System.out.println("        De 10:00 a 11:00 horas.");
         System.out.println("------------------------------------------------------------");
@@ -279,8 +262,5 @@ public class Simpson {
         System.out.printf("Error del Metodo         = %.5f %s%n", Error, unidad);
 
         System.out.println();
-        System.out.println("============================================================");
-        System.out.println("                        fin");
-        System.out.println("============================================================");
     }
 }
